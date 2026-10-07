@@ -8,9 +8,23 @@ const EMOJI_MAP = new Map<EMOJI_KEYS,string> ([
 ]);
 
 export default function Emoji() {
+    let status:EMOJI_KEYS = "love";
+
+    function happyClick () {
+        console.log("Status: ", status);
+        console.log("HAPPYYYYYYY!!");
+        status = "happy";
+        console.log("Status: ", status);
+    }
+
     return (
-        <div className = "emoji">
-           {EMOJI_MAP.get("kiss") || "🫣​"}
-        </div>
+        <>
+            <div className = "emoji">
+           {EMOJI_MAP.get(status) || "🫣​"}
+            </div>
+            <div className = "acoes">
+                 <button onClick={happyClick}>Happy</button>
+            </div>
+        </>
     );
 }
