@@ -17,6 +17,18 @@ export default function Emoji() {
         setStatus ("happy");
         console.log("Status: ", status);
     }
+    function kissClick () {
+        console.log("Status: ", status);
+        console.log("KISSSSSSSSS!!");
+        setStatus ("kiss");
+        console.log("Status: ", status);
+    }
+    function loveClick () {
+        console.log("Status: ", status);
+        console.log("LOVEEEEEEEEE!!");
+        setStatus ("love");
+        console.log("Status: ", status);
+    }
 
     return (
         <>
@@ -25,6 +37,8 @@ export default function Emoji() {
             </div>
             <div className = "acoes">
                  <button onClick={happyClick}>Happy</button>
+                 <button onClick={kissClick}>Kiss</button>
+                 <button onClick={loveClick}>Love</button>
             </div>
         </>
     );
