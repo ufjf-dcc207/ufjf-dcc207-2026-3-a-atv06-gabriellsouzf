@@ -30,6 +30,22 @@ export default function Emoji() {
         console.log("Status: ", status);
     }
 
+    function Circle() {
+        switch (status) {
+            case "kiss":
+                setStatus("happy");
+                break;
+            case "happy":
+                setStatus("love");
+                break;
+            case "love":
+                setStatus("kiss");
+                break;
+            default:
+                setStatus("happy");   
+        }
+    }
+
     return (
         <>
             <div className = "emoji">
@@ -39,6 +55,7 @@ export default function Emoji() {
                  <button onClick={happyClick}>Happy</button>
                  <button onClick={kissClick}>Kiss</button>
                  <button onClick={loveClick}>Love</button>
+                 <button onClick={Circle}>Circle</button>
             </div>
         </>
     );
