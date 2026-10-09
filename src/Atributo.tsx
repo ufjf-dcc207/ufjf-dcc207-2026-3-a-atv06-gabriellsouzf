@@ -4,7 +4,7 @@ export default function Atributo() {
     const [valor, setValor] = useState<number>(0)
     let coracoes = "";
     for(let i=0; i<5;i++) {
-        if (i<=valor) {
+        if (i<valor) {
             coracoes += "❤️"
         }
         else {
